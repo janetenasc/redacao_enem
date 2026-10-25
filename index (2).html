@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Como avaliar uma Redação ENEM · Guia para professores</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF6EC;--ink:#14234F;--mut:#4B5878;--card:#fff;--line:#E6DCC6;--red:#D62828;--yel:#F7C52D;--grn:#1F9D6B;--pur:#7B3FBF;--ok:#E3F5EC;--no:#FCE8E6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1630;--ink:#F4EFE3;--mut:#B6BED6;--card:#18234A;--line:#2C3A6B;--ok:#123B30;--no:#4A1E26;--red:#FF6B6B;--pur:#B58CF0;--grn:#3DD39A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E1630;--ink:#F4EFE3;--mut:#B6BED6;--card:#18234A;--line:#2C3A6B;--ok:#123B30;--no:#4A1E26;--red:#FF6B6B;--pur:#B58CF0;--grn:#3DD39A;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;line-height:1.1;margin:0}
+main{max-width:720px;margin:0 auto;padding:0 18px 60px}
+.hero{padding:34px 0 22px}
+.tag{display:inline-block;font-weight:700;font-size:14px;border-left:4px solid var(--red);padding-left:10px;margin-bottom:16px}
+.tag b{color:var(--red)}
+h1{font-size:clamp(38px,11vw,64px);font-weight:800;letter-spacing:-.02em}
+h1 em{font-style:normal;color:var(--red);background:linear-gradient(transparent 70%,var(--yel) 70% 92%,transparent 92%)}
+.sub{font-size:19px;color:var(--mut);margin:14px 0 0}
+section{margin-top:44px}
+h2{font-size:clamp(26px,7vw,36px);font-weight:800;margin-bottom:8px}
+.lead{color:var(--mut);margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:600;font-size:15px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:2px solid var(--line);background:var(--card);color:var(--ink);font:700 16px Figtree,sans-serif;border-radius:14px;padding:10px 16px;cursor:pointer;min-height:46px}
+.tab[aria-selected=true]{background:var(--c);border-color:var(--c);color:var(--tc,#fff)}
+.tab:focus-visible,.btn:focus-visible,.seg button:focus-visible,.hl:focus-visible,.ck:focus-within{outline:3px solid var(--yel);outline-offset:2px}
+.panel{background:var(--card);border:1.5px solid var(--line);border-top:8px solid var(--c);border-radius:18px;padding:22px 18px}
+.panel h3{font-size:26px;font-weight:800}
+.q{display:inline-block;margin:10px 0 4px;font-weight:700;background:var(--c);color:var(--tc,#fff);border-radius:10px;padding:4px 12px;font-size:15px}
+.panel h4{font:700 15px Figtree,sans-serif;margin:22px 0 8px;color:var(--mut)}
+.panel ul.l{margin:0;padding-left:20px}.panel ul.l li{margin:5px 0}
+.note{background:var(--no);border-radius:12px;padding:12px 14px;margin-top:18px;font-size:16px}
+.note.g{background:var(--ok)}
+.seg{display:flex;gap:6px;background:var(--bg);border-radius:12px;padding:5px;margin:10px 0}
+.seg button{flex:1;border:0;background:transparent;color:var(--ink);font:700 15px Figtree,sans-serif;padding:11px 8px;border-radius:9px;cursor:pointer;min-height:46px}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.out{border-radius:12px;padding:14px;background:var(--bg);border:1.5px dashed var(--line)}
+.out.bad{background:var(--no)}.out.good{background:var(--ok)}
+.out p{margin:0 0 6px}.out p:last-child{margin:0}
+.hl{border-radius:6px;padding:1px 4px;cursor:pointer;border:0;font:inherit;color:inherit;background:none;text-align:left;box-decoration-break:clone;-webkit-box-decoration-break:clone;display:inline;border-bottom:3px solid var(--k)}
+.hl[aria-pressed=true]{background:var(--k);color:#14234F}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.legend span{font-size:14px;font-weight:700;padding:3px 10px;border-radius:999px;border:2px solid var(--k);opacity:.45}
+.legend span.on{opacity:1;background:var(--k);color:#14234F}
+.flow{display:grid;gap:8px;margin:6px 0}
+.flow div{border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;background:var(--bg)}
+.flow b{color:var(--red)}
+.steps{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:600px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:18px}
+.step h3{font-size:24px;margin-bottom:6px}.step:nth-child(1) h3{color:var(--red)}.step:nth-child(2) h3{color:var(--pur)}.step:nth-child(3) h3{color:var(--grn)}
+ol.prio{list-style:none;counter-reset:p;padding:0;margin:14px 0 0;display:grid;gap:8px}
+ol.prio li{counter-increment:p;display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:12px 14px}
+ol.prio li::before{content:counter(p);flex:0 0 32px;height:32px;border-radius:50%;background:var(--yel);color:#14234F;font:800 17px "Bricolage Grotesque",sans-serif;display:grid;place-items:center}
+ol.prio b{display:block}
+.prog{height:12px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 14px}
+.prog i{display:block;height:100%;width:0;background:var(--grn);transition:width .3s}
+.ck{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;margin:8px 0;cursor:pointer}
+.ck input{width:24px;height:24px;flex:0 0 24px;accent-color:var(--grn);margin:1px 0 0}
+.ck:has(input:checked){background:var(--ok);border-color:var(--grn)}
+.msg{font-weight:700;min-height:26px;color:var(--grn)}
+.btn{border:0;background:var(--ink);color:var(--bg);font:700 15px Figtree,sans-serif;border-radius:10px;padding:10px 16px;cursor:pointer;min-height:44px}
+.keep{background:var(--ink);color:var(--bg);border-radius:20px;padding:26px 20px}
+.keep h2{color:var(--yel)}
+.keep p{margin:14px 0 0;font-size:19px}
+.keep mark{background:none;color:var(--yel);font-weight:700}
+footer{margin-top:28px;color:var(--mut);font-size:14px}
+.sign{margin-top:18px;border-left:4px solid var(--red);padding:2px 0 2px 12px;font-size:15px;line-height:1.4}
+.sign b{display:block;color:var(--ink)}
+.sign span{color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <span class="tag">INTENSIVÃO ENEM | <b>SEDUC-SP</b></span>
+  <h1>Como avaliar uma <em>Redação ENEM</em></h1>
+  <p class="sub">Guia prático para professores. Toque nos cartões para explorar cada competência.</p>
+</header>
+
+<section>
+  <h2>O que o ENEM espera do estudante?</h2>
+  <p class="lead">Um texto dissertativo-argumentativo em prosa, na modalidade formal da língua portuguesa, sobre um tema de ordem social, científica, cultural ou política. O estudante deve:</p>
+  <ul class="chips">
+    <li>compreender o tema</li><li>apresentar um ponto de vista</li><li>desenvolver argumentos</li><li>mobilizar conhecimentos pertinentes</li><li>organizar ideias com coerência</li><li>usar recursos coesivos</li><li>propor uma intervenção</li><li>respeitar os direitos humanos</li>
+  </ul>
+</section>
+
+<section>
+  <h2>As 5 competências</h2>
+  <p class="lead">Cada uma vale até 200 pontos, totalizando 1.000. Em vez de perguntar apenas “este texto está bem escrito?”, o professor responde a cinco perguntas, uma por competência.</p>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+</section>
+
+<section>
+  <h2>Como corrigir na prática</h2>
+  <p class="lead">Uma leitura única e orientada: observe alguns aspectos enquanto lê e faça o diagnóstico ao final.</p>
+  <div class="steps">
+    <div class="step"><h3>1. Marque</h3><p>Os problemas mais relevantes durante a leitura. Não é preciso marcar todas as ocorrências do mesmo problema.</p></div>
+    <div class="step"><h3>2. Classifique</h3><p>O desempenho nas cinco competências.</p></div>
+    <div class="step"><h3>3. Priorize</h3><p>Uma ou duas habilidades que o estudante precisa desenvolver na próxima produção.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>O que priorizar na devolutiva?</h2>
+  <p class="lead">Nem todos os problemas precisam ser trabalhados ao mesmo tempo. Para estudantes com muitas dificuldades, uma boa ordem é:</p>
+  <ol class="prio">
+    <li><span><b>Tema</b>O estudante respondeu ao que foi solicitado?</span></li>
+    <li><span><b>Tese</b>É possível identificar o que ele defende?</span></li>
+    <li><span><b>Argumentação</b>Ele consegue explicar e sustentar essa posição?</span></li>
+    <li><span><b>Organização</b>O raciocínio progride entre os parágrafos?</span></li>
+    <li><span><b>Intervenção</b>A proposta responde aos problemas apresentados?</span></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Checklist rápido para o professor</h2>
+  <p class="lead">Antes de finalizar a correção, verifique:</p>
+  <div class="prog"><i id="bar"></i></div>
+  <div id="cks"></div>
+  <p class="msg" id="msg" aria-live="polite"></p>
+  <button class="btn" id="reset">Limpar checklist</button>
+</section>
+
+<section class="keep">
+  <h2>Para guardar</h2>
+  <p>A boa correção não é aquela que encontra mais erros.</p>
+  <p>É aquela que identifica qual <mark>habilidade o estudante já domina</mark>, qual ainda precisa desenvolver e qual <mark>orientação</mark> pode ajudá-lo a avançar na próxima produção.</p>
+  <p>Na reta final para o ENEM, a correção deve ser objetiva, criteriosa e, sobretudo, orientadora.</p>
+</section>
+<footer>
+  <div class="sign"><span>Retextualização e adaptação</span><b>URE Caieiras</b><span>PEC Desenvolvimento Curricular de Língua Portuguesa – Redação e Leitura</span></div>
+  <p style="margin:14px 0 0">Intensivão ENEM · SEDUC-SP</p>
+</footer>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+const C=[
+{id:'C1',n:'Escrita formal',t:'Domínio da modalidade escrita formal da língua portuguesa',q:'Como o estudante escreve?',c:'#14234F',tc:'#fff',
+lead:'Observa-se o domínio das convenções da escrita formal.',
+obs:['ortografia','acentuação','pontuação','concordância verbal e nominal','regência','emprego de pronomes','construção sintática','escolha vocabular','adequação ao registro formal'],
+ask:['Os erros são pontuais ou aparecem repetidamente?','As frases estão completas e bem construídas?','A pontuação ajuda ou dificulta a compreensão?','O vocabulário é adequado ao contexto formal?'],
+note:'Um texto não precisa ser linguisticamente sofisticado para alcançar um bom desempenho. O mais importante é que os desvios não sejam frequentes nem comprometam a leitura.'},
+{id:'C2',n:'Tema e repertório',t:'Compreensão da proposta e desenvolvimento do tema',q:'Ele compreendeu o que deveria discutir e teve repertório para isso?',c:'#D62828',tc:'#fff',
+lead:'Verifica se o estudante compreendeu o tema e consegue desenvolvê-lo dentro da estrutura de um texto dissertativo-argumentativo. Três aspectos: compreensão do tema, estrutura dissertativo-argumentativa e repertório sociocultural.',
+ask:['O estudante respondeu exatamente ao tema?','Existe uma tese?','O texto é predominantemente argumentativo?','O repertório utilizado contribui efetivamente para a argumentação?'],
+note:'Não basta narrar acontecimentos, descrever situações ou apresentar informações. O texto precisa de discussão, ponto de vista e argumentos que o sustentem.'},
+{id:'C3',n:'Argumentação',t:'Construção da argumentação',q:'Ele consegue defender uma ideia?',c:'#F7C52D',tc:'#14234F',
+lead:'Avalia a capacidade de selecionar, relacionar, organizar e interpretar informações, fatos, opiniões e argumentos para defender um ponto de vista. Em termos simples: o estudante tem um projeto para o texto?',
+ask:['Consigo identificar claramente a tese?','Os argumentos sustentam essa tese?','Cada parágrafo desenvolve uma ideia?','As afirmações são explicadas ou apenas apresentadas?','Há contradições?','O texto progride ou repete as mesmas ideias?'],
+note:'Cuidado com o “argumento de uma frase”: “Além disso, a falta de educação também contribui para esse problema.” A afirmação apresenta uma ideia, mas não a desenvolve. Ensine o estudante a responder: Por quê? Como isso acontece? Qual é a consequência? Que exemplo ou informação comprova?'},
+{id:'C4',n:'Coesão',t:'Coesão e articulação das ideias',q:'Ele consegue conectar e articular suas ideias?',c:'#1F9D6B',tc:'#fff',
+lead:'Observa os mecanismos linguísticos que constroem a argumentação: conjunções, advérbios, pronomes, expressões referenciais, substituições lexicais e relações entre frases e parágrafos.',
+obs:['portanto','entretanto','além disso','nesse sentido','consequentemente','por outro lado'],
+ask:['As frases estão conectadas entre si?','Os parágrafos se relacionam?','Os conectivos expressam relações lógicas adequadas?','Há repetições excessivas de palavras?','O leitor acompanha o raciocínio sem precisar adivinhar as relações entre as ideias?'],
+note:'Coesão não significa quantidade de conectivos. É fazer as ideias conversarem entre si: isso dá fluidez, clareza e força ao texto.'},
+{id:'C5',n:'Intervenção',t:'Proposta de intervenção',q:'Ele consegue propor uma intervenção para o problema?',c:'#7B3FBF',tc:'#fff',
+lead:'O estudante deve apresentar uma proposta para enfrentar o problema discutido no texto. Uma proposta bem desenvolvida costuma responder a cinco perguntas: O quê? Quem? Como? Para quê? Com que detalhamento?',
+ask:[],
+note:'Propostas genéricas como “o governo precisa investir em educação” ou “a população precisa se conscientizar” tendem a apresentar baixo grau de desenvolvimento. A proposta também precisa estar relacionada ao problema efetivamente discutido e respeitar os direitos humanos.'}
+];
+
+function seg(id,a,b){return `<div class="seg" data-seg="${id}"><button aria-pressed="true" data-v="0">${a}</button><button aria-pressed="false" data-v="1">${b}</button></div><div class="out" id="${id}" aria-live="polite"></div>`}
+const extras={
+C2:()=>`<h4>Tema ou assunto?</h4><p style="margin:0 0 6px">Tema é o que efetivamente precisa ser discutido. Assunto é o campo mais amplo ao qual o tema pertence. Se o tema fosse <b>“Desafios para combater a desinformação científica no Brasil”</b>:</p>${seg('x1','Só o assunto','Dentro do tema')}
+<h4>Repertório: citar ou argumentar?</h4>${seg('x2','Não basta citar','Trabalha pelo argumento')}`,
+C3:()=>`<h4>Exemplo de tese</h4><div class="out good"><p><b>Tese:</b> A desinformação científica permanece um problema no Brasil devido à baixa alfabetização científica da população e à circulação acelerada de conteúdos falsos nas plataformas digitais.</p></div>
+<h4>O caminho argumentativo possível</h4><div class="flow"><div><b>Argumento 1:</b> baixa alfabetização científica.</div><div><b>Argumento 2:</b> funcionamento das plataformas digitais.</div><div><b>Conclusão:</b> intervenção sobre esses dois aspectos.</div></div>
+<p style="margin:8px 0 0">Um bom parágrafo costuma ter: <b>afirmação → explicação → evidência/exemplo/repertório → relação com a tese</b>. Não é fórmula obrigatória, mas uma forma útil de verificar se o estudante desenvolve as ideias.</p>`,
+C4:()=>`<h4>Compare</h4>${seg('x3','Muitos conectivos','O que avaliar')}`,
+C5:()=>`<h4>Toque nos trechos da proposta</h4><p class="out" id="p5" style="line-height:2"></p><div class="legend" id="lg5"></div><div class="out" id="d5" style="margin-top:10px" aria-live="polite">Toque em um trecho para identificar o elemento.</div>`
+};
+const X={
+x1:[`<p><b>Não seria suficiente</b> falar genericamente sobre internet, redes sociais ou fake news.</p>`,`<p>O estudante precisaria discutir especificamente <b>a desinformação científica</b> e <b>os desafios</b> para enfrentá-la no contexto brasileiro.</p>`],
+x2:[`<p><i>“Segundo Paulo Freire, a educação transforma as pessoas.”</i></p><p>A referência aparece, mas <b>não necessariamente contribui</b> para o raciocínio.</p>`,`<p><i>“Ao defender uma educação capaz de formar sujeitos críticos, Paulo Freire ajuda a compreender por que a alfabetização midiática pode funcionar como estratégia de enfrentamento à desinformação.”</i></p><p>Aqui, o conhecimento foi <b>integrado ao argumento</b>.</p>`],
+x3:[`<p><i>“<b>Além disso</b>, existe desigualdade. <b>Portanto</b>, muitas pessoas não possuem acesso. <b>Entretanto</b>, esse é um problema brasileiro.”</i></p><p>Há conectivos, mas a relação lógica entre as ideias é <b>frágil</b>.</p>`,`<p>O professor deve avaliar se os recursos utilizados <b>expressam corretamente as relações entre as ideias</b>, não contar quantos conectivos existem.</p>`]
+};
+const cls={x1:['bad','good'],x2:['bad','good'],x3:['bad','good']};
+const P5=[['Agente','O Ministério da Educação, em parceria com as redes de ensino,','Ministério da Educação e redes de ensino.','#F7C52D'],['Ação','deve ampliar programas de educação midiática nas escolas,','ampliar programas de educação midiática.','#F28B82'],['Meio','por meio da formação de professores e da produção de materiais didáticos específicos,','formação docente e materiais didáticos.','#8FD3B5'],['Finalidade','para desenvolver nos estudantes estratégias de identificação e verificação de informações falsas,','desenvolver estratégias de identificação e verificação de informações.','#B9C7F5'],['Detalhamento','incorporando essas atividades às práticas regulares das diferentes áreas do conhecimento.','incorporação das atividades às práticas regulares das áreas.','#D9B8F5']];
+
+function render(i){
+  const k=C[i],p=$('#panel');
+  p.style.setProperty('--c',k.c);p.style.setProperty('--tc',k.tc);
+  p.innerHTML=`<h3>${k.id} · ${k.t}</h3><span class="q">${k.q}</span><p style="margin:12px 0 0">${k.lead}</p>`
+  +(k.obs?`<h4>${k.id==='C4'?'Conectivos que podem contribuir':'O professor deve observar'}</h4><ul class="chips">${k.obs.map(o=>`<li>${o}</li>`).join('')}</ul>`:'')
+  +(extras[k.id]?extras[k.id]():'')
+  +(k.ask.length?`<h4>Ao corrigir, pergunte</h4><ul class="l">${k.ask.map(a=>`<li>${a}</li>`).join('')}</ul>`:'')
+  +`<div class="note ${k.id==='C4'?'g':''}">${k.note}</div>`;
+  p.querySelectorAll('[data-seg]').forEach(s=>{
+    const id=s.dataset.seg,o=document.getElementById(id);
+    const set=v=>{o.innerHTML=X[id][v];o.className='out '+cls[id][v];s.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v==v))};
+    s.onclick=e=>{const b=e.target.closest('button');if(b)set(+b.dataset.v)};set(0);
+  });
+  if(k.id==='C5'){
+    $('#p5').innerHTML=P5.map((x,j)=>`<button class="hl" style="--k:${x[3]}" aria-pressed="false" data-j="${j}">${x[1]}</button> `).join('');
+    $('#lg5').innerHTML=P5.map((x,j)=>`<span style="--k:${x[3]}" id="lg${j}">${x[0]}</span>`).join('');
+    $('#p5').onclick=e=>{const b=e.target.closest('.hl');if(!b)return;const j=+b.dataset.j;
+      b.setAttribute('aria-pressed','true');$('#lg'+j).classList.add('on');
+      $('#d5').innerHTML=`<b>${P5[j][0]}:</b> ${P5[j][2]}`};
+  }
+}
+const T=$('#tabs');
+C.forEach((k,i)=>{const b=document.createElement('button');b.className='tab';b.role='tab';b.textContent=k.id+' · '+k.n;b.style.setProperty('--c',k.c);b.style.setProperty('--tc',k.tc);
+  b.onclick=()=>{T.querySelectorAll('.tab').forEach(x=>x.setAttribute('aria-selected',x===b));render(i);b.scrollIntoView({inline:'center',block:'nearest'})};
+  b.setAttribute('aria-selected',i===0);T.appendChild(b)});
+render(0);
+
+const L=['O estudante abordou integralmente o tema?','Há uma tese identificável?','Os parágrafos desenvolvem argumentos diferentes?','Os argumentos são explicados?','O repertório contribui para o raciocínio?','Existe progressão entre as ideias?','Os conectivos estabelecem relações adequadas?','Os desvios linguísticos são pontuais ou recorrentes?','A proposta de intervenção responde ao problema discutido?','É possível identificar ação, agente, meio, finalidade e algum detalhamento?'];
+$('#cks').innerHTML=L.map(t=>`<label class="ck"><input type="checkbox"><span>${t}</span></label>`).join('');
+function upd(){const a=[...document.querySelectorAll('.ck input')],n=a.filter(x=>x.checked).length;
+  $('#bar').style.width=(n/a.length*100)+'%';
+  $('#msg').textContent=n===a.length?'Tudo verificado. Hora de fazer a devolutiva.':n+' de '+a.length+' verificados';}
+$('#cks').onchange=upd;
+$('#reset').onclick=()=>{document.querySelectorAll('.ck input').forEach(x=>x.checked=false);upd()};
+upd();
+</script>
+</body>
+</html>
